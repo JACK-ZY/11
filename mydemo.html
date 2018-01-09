@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人工作作品</title>
+    <link rel="stylesheet" href="mydemo.css" type="text/css"/>
+    <script src="mydemo.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js">
+    </script>
+    <script>
+        var aa1=0,aa3=0,aa4=1,aa5=0,aa6,aa;
+        $(document).ready(function () {
+            alert($("#zu01").outerWidth(true));
+            y=($("#zu01").outerWidth(true));
+            aa6=0;
+            $("#hexintupianul li").each(function () {
+                $(this).css({"left":aa6+"px","top":0 ,"position": "absolute","margin-left":"0px"} );
+                //aa6+=0;
+                aa6+=162;
+            });
+            $("#hexintupianzu").mouseenter(function () {
+                clearInterval(aa2);
+            }).mouseleave(function () {
+                aa2=setInterval("pp()",1000);
+            });
+        });
+
+        var aa2=setInterval("pp()",1000);
+        function pp1(x) {
+            clearInterval(aa2);
+            aa5=x;
+            if (x!=1) aa1 =-162;else aa1=162;
+            pp(aa5);
+        }
+        function pp(x) {
+            if (aa3==1) {
+                if (x != 1) {
+                    aa = $("#hexintupianul li:first").clone();
+                    aa6 = $("#hexintupianul li:last").position();
+                    $("#hexintupianul li:last").after(aa);
+                    $("#hexintupianul li:last").css("left", aa6.left+162+ "px");
+                    $("#hexintupianul li:first").remove();
+                }
+                else {
+                    aa = $("#hexintupianul li:last").clone();
+                    aa6 = $("#hexintupianul li:first").position();
+                    $("#hexintupianul li:first").before(aa);
+                    $("#hexintupianul li:first").css("left", aa6.left - 162+ "px");
+                    $("#hexintupianul li:last").remove();}
+
+                aa3 = 0; }
+
+
+            $("#hexintupianul li").each(function () {
+                aa6=$(this).position();
+                $(this).css("left",aa6.left+aa1+"px");
+            });
+            if (x!=1) aa1 =-162;else aa1=162;
+
+            aa3++;}
+    </script>
+    <style type="text/css">
+
+
+        .sousuosubmit{
+            width: 56px;
+            height: 26px;
+            -moz-border-radius:15px;
+            -webkit-border-radius:15px;
+            border-radius:15px;                /* 圆角边框 */
+            behavior: url(PIE.htc);
+            position:relative;
+            /*behavior:url(pie.htc);*/
+        }
+    </style>
+
+</head>
+<body>
+
+
+
+<header>
+    <nav>
+        <div class="juzhong">
+             <div class="toptext clear">
+                 <div class="welcome floatleft">您好，欢迎您来到仁达方略！<a href="javascript:;" style="text-decoration: none;color: black">[登录]</a> <a href="javascript:;" style="text-decoration: none;color: black">[免费注册]</a></div>
+
+            <div class="about floatright" id="about">
+            <ul><li>关于仁达 |</li>
+                <li>&nbsp;加入我们 |</li>
+                <li>&nbsp;加入收藏 |</li>
+                <li>&nbsp; 论坛 |</li>
+                <li>&nbsp;网页导航 |</li>
+                <li>&nbsp;关注微信</li></ul>
+            </div>
+            </div>
+        </div>
+
+<!--仁达方略到热线电话-->
+        <!--100%背景图-->
+        <div class="header-bg1">
+            <!--1003宽 高82-->
+            <div class="  rendadianhuakuan clear">
+                <!--左边仁达方略+世界地图的背景-->
+                <div class="topbg-photo floatleft"  ><a href="http://www.ren-manage.com/" target="_self">
+                <img src="mydemoimg/logo.png" style="padding-top:24px;"> </a></div>
+
+            <!--右边新浪到热线电话 以后换成一整张图!!用定位-->
+            <div class="floatleft"  >
+                <ul class="imglist clear">
+                    <li><a href="#" target="_self"> <img src="mydemoimg/zaixianzixun.png" style="margin-top: -6px"></a> </li>
+                    <li><a href="#" target="_self"> <img src="mydemoimg/xinlangweibo.png"></a> </li>
+                    <li><a href="#" target="_self"> <img src="mydemoimg/tijiaoxuqiu.png"style="margin-top: -1px"></a></li>
+                    <li><a href="#" target="_self"> <img src="mydemoimg/rexiandianhua.png"></a></li>
+                </ul>
+
+            </div>
+            </div>
+        </div>
+    <!--蓝色100%首页横条-->
+        <div class="header-bg2" id="gudingheader"  >
+            <!--蓝色首页横条框1003 高36-->
+            <div class="shouyedaosousuokuan clear">
+                <div class="shouyedaowomen floatleft" id="shouyedaowomen">
+                    <ul id="gudingheaderul">
+                        <li>首页</li>
+                        <li onmouseover="xianshikuang(11)" onmouseout="xianshikuang(12)"  >关于仁达</li>
+                        <li onmouseover="xianshikuang(21)" onmouseout="xianshikuang(22)">管理咨询</li>
+                        <li onmouseover="xianshikuang(31)" onmouseout="xianshikuang(32)">管理研究院</li>
+                        <li onmouseover="xianshikuang(41)" onmouseout="xianshikuang(42)">企管培训</li>
+                        <li>联系我们</li>
+
+                    </ul>
+                </div>
+                <div class="sousuo floatright">
+                <form action="" method="get">
+                <input type="text" class="sousuoinput" id="sousuoinput" placeholder="请输入搜索内容" >
+                <input type="submit" class="sousuosubmit" id="sousuosubmit" value="搜索" style="margin-left: -65px" >
+                </form>
+            </div>
+        </div>
+            <div style="width: 1003px;margin: 0 auto;position: relative">
+        <div class="guanyukuang" id="guanyukuang" onmouseover="xianshikuang(11)" onmouseout="xianshikuang(12)"  style="display: none;">
+            <div class="guanyukuangtu"><a href="#"><img src="mydemoimg/20140415103230_29094.gif"></a></div>
+            <div class="guanyukuangneirong clear">
+                <dl class="floatleft"><dt class="clear">仁达简介</dt>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                </dl>
+                <dl class="floatleft"><dt class="clear">仁达简介</dt>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                </dl>
+                <dl class="floatleft"><dt class="clear">仁达简介</dt>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                </dl>
+                <dl class="floatleft"><dt class="clear">仁达简介</dt>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                </dl>
+                <dl class="floatleft">
+                    <dt class="clear">仁达简介</dt>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                </dl>
+
+            </div>
+
+        </div>
+        <div class="guanyukuang" id="guanlikuang" onmouseover="xianshikuang(21)" onmouseout="xianshikuang(22)"  style="display: none;">
+            <div class="guanyukuangtu"><a href="#"><img src="mydemoimg/20140415103356_29563.gif"></a></div>
+            <div class="guanyukuangneirong clear">
+                <dl class="floatleft"><dt class="clear">仁达简介</dt>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                </dl>
+                <dl class="floatleft"><dt class="clear">仁达简介</dt>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                </dl>
+                <dl class="floatleft"><dt class="clear">仁达简介</dt>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                </dl>
+                <dl class="floatleft"><dt class="clear">仁达简介</dt>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                </dl>
+                <dl class="floatleft">
+                    <dt class="clear">仁达简介</dt>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                </dl>
+
+            </div>
+
+        </div>
+        <div class="guanyukuang" id="yanjiuyuankuang" onmouseover="xianshikuang(31)" onmouseout="xianshikuang(32)"  style="display: none;">
+            <div class="guanyukuangtu"><a href="#"><img src="mydemoimg/20140415103230_29094.gif"></a></div>
+            <div class="guanyukuangneirong clear">
+                <dl class="floatleft"><dt class="clear">仁达简介</dt>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                </dl>
+                <dl class="floatleft"><dt class="clear">仁达简介</dt>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                </dl>
+                <dl class="floatleft"><dt class="clear">仁达简介</dt>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                </dl>
+                <dl class="floatleft"><dt class="clear">仁达简介</dt>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                </dl>
+                <dl class="floatleft">
+                    <dt class="clear">仁达简介</dt>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                </dl>
+
+            </div>
+
+        </div>
+        <div class="guanyukuang" id="qiguankuang"  onmouseover="xianshikuang(41)" onmouseout="xianshikuang(42)" style="display: none;">
+            <div class="guanyukuangtu"><a href="#"><img src="mydemoimg/20140415103230_29094.gif"></a></div>
+            <div class="guanyukuangneirong clear">
+                <dl class="floatleft"><dt class="clear">仁达简介</dt>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                </dl>
+                <dl class="floatleft"><dt class="clear">仁达简介</dt>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                </dl>
+                <dl class="floatleft"><dt class="clear">仁达简介</dt>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                </dl>
+                <dl class="floatleft"><dt class="clear">仁达简介</dt>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                </dl>
+                <dl class="floatleft">
+                    <dt class="clear">仁达简介</dt>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司简介</a></dd>
+                </dl>
+
+            </div>
+
+        </div>
+
+            </div>
+        </div>
+
+    </nav>
+
+</header>
+
+<!--主体部分-->
+
+    <!--图片切换div-->
+    <div class="tupianqiehuan" onmouseover="qianhou(3)" onmouseout="qianhou(4)">
+       <a href="#"><img src="mydemoimg/20140613153839_57878.jpg" id="qietu1"></a>
+        <a class="xiangqian" id="xiangqian" onclick="qianhou(1)"><img src="mydemoimg/prev.jpg" id="xiangqiantu"></a>
+        <a class="houtui" id="houtui" onclick="qianhou(2)"><img src="mydemoimg/next.jpg" id="houtuitu"></a>
+    </div>
+    <!--公司动态研究动态，培训动态标题-->
+    <div class="dongtaibiaoti">
+        <ul>
+            <li class="dongtaibiaotilogo1"><span class="dongtaibiaotiwenzi">公司动态</span><em>Industry News</em><a href="#" style="text-decoration: none"  >| MORE>></a></li>
+            <li class="dongtaibiaotilogo2"><span class="dongtaibiaotiwenzi">研究动态</span><em>Research Activities</em><a href="#" style="text-decoration: none"  >| MORE>></a></li>
+            <li class="dongtaibiaotilogo3"><span class="dongtaibiaotiwenzi">培训动态</span><em>Dynamic Training</em><a href="#" style="text-decoration: none"  >| MORE>></a></li>
+        </ul>
+    </div>
+    <!--公司动态研究动态，培训动态内容-->
+    <div class="dongtaineirong clear">
+        <div class="dongtaineirongkuang floatleft">
+            <div class="dongtaineirongimg">
+                <a href="#"><img src="mydemoimg/img1.jpg"></a>
+            </div>
+            <div class="dongtaineirong1neirong">
+                <ul>
+                    <li><a href="#">老牛说煤第一期：如何看待世界经济新</a><span class="floatright">2017-03-03</span></li>
+                    <li><a href="#">务实、踏实、瓷实——牛眼看世界：</a><span class="floatright">2017-03-03</span></li>
+                    <li><a href="#">务实、踏实、瓷实——牛眼看世界：</a><span class="floatright">2017-03-03</span></li>
+                    <li><a href="#">务实、踏实、瓷实——牛眼看世界：</a><span class="floatright">2017-03-03</span></li>
+                    <li><a href="#">务实、踏实、瓷实——牛眼看世界：</a><span class="floatright">2017-03-03</span></li>
+                    <li><a href="#">务实、踏实、瓷实——牛眼看世界：</a><span class="floatright">2017-03-03</span></li>
+                </ul>
+            </div>
+        </div>
+        <!--将ul li a等放到三个div里通用就不用每次设置了-->
+        <div class="dongtaineirongkuang dongtaineirongkuang2 floatleft">
+            <div class="dongtaineirongimg">
+                    <a href="#"><img src="mydemoimg/img2.jpg"></a>
+                </div>
+                <div class="dongtaineirong1neirong">
+                    <ul>
+                        <li><a href="#">老牛说煤第一期：如何看待世界经济新</a><span class="floatright">2017-03-03</span></li>
+                        <li><a href="#">务实、踏实、瓷实——牛眼看世界：</a><span class="floatright">2017-03-03</span></li>
+                        <li><a href="#">务实、踏实、瓷实——牛眼看世界：</a><span class="floatright">2017-03-03</span></li>
+                        <li><a href="#">务实、踏实、瓷实——牛眼看世界：</a><span class="floatright">2017-03-03</span></li>
+                        <li><a href="#">务实、踏实、瓷实——牛眼看世界：</a><span class="floatright">2017-03-03</span></li>
+                        <li><a href="#">务实、踏实、瓷实——牛眼看世界：</a><span class="floatright">2017-03-03</span></li>
+                    </ul>
+                </div>
+
+
+        </div>
+        <div class="dongtaineirongkuang  floatleft">
+                <div class="dongtaineirongimg">
+                    <a href="#"><img src="mydemoimg/img3.jpg"></a>
+                </div>
+                <div class="dongtaineirong1neirong">
+                    <ul>
+                        <li><a href="#">老牛说煤第一期：如何看待世界经济新</a><span class="floatright">2017-03-03</span></li>
+                        <li><a href="#">务实、踏实、瓷实——牛眼看世界：</a><span class="floatright">2017-03-03</span></li>
+                        <li><a href="#">务实、踏实、瓷实——牛眼看世界：</a><span class="floatright">2017-03-03</span></li>
+                        <li><a href="#">务实、踏实、瓷实——牛眼看世界：</a><span class="floatright">2017-03-03</span></li>
+                        <li><a href="#">务实、踏实、瓷实——牛眼看世界：</a><span class="floatright">2017-03-03</span></li>
+                        <li><a href="#">务实、踏实、瓷实——牛眼看世界：</a><span class="floatright">2017-03-03</span></li>
+                    </ul>
+                </div>
+    </div>
+    </div>
+
+    <!--核心业务.....如此改上面图片切换的方式，因为ie不显示-->
+    <div class="hexin">
+    <div class="hexinbiaoti"><span class="dongtaibiaotiwenzi">核心业务</span><em>Core Business</em><a href="#" class="floatright"><img src="mydemoimg/more_logo1.png"> </a></div>
+    <div class="hexintupiankuang clear">
+        <a class="zuoanniu " id="zuoanniu" onmouseover="changeIm(11)" onmouseout="changeIm(12)" onclick="pp1(1)"><img src="mydemoimg/prev.jpg"></a>
+        <a class="youanniu " id="youanniu" onmouseover="changeIm(21)" onmouseout="changeIm(22)" onclick="pp1(2)"><img src="mydemoimg/next.jpg"></a>
+        <div class="hexintupianzu clear " id="hexintupianzu"  >
+           <ul class="hexintupianul" id="hexintupianul">
+               <li id="zu01"  style="margin-left: 0px;margin-top: 0; " > <a href="#"><img src="mydemoimg/zu_01.jpg" alt="" /></a>
+               <p><a href="#">集团管控<br /><em>Group Control</em></a></p></li>
+               <li id="zu02"  style="margin-left: 160px;margin-top: 0;"  > <a href="#"><img src="mydemoimg/zu_02.jpg" alt=""  /></a>
+               <!--<li id="zu02" style="z-index: 1;"> <a href="#"><img src="mydemoimg/zu_02.jpg" alt=""  /></a>-->
+                   <p><a href="#">集团管控<br /><em>Group Control</em></a></p></li>
+               <li id="zu03" style="margin-left: 320px;margin-top: 0;" > <a href="#"><img src="mydemoimg/zu_03.jpg" alt=""  /></a>
+                   <p><a href="#">集团管控<br /><em>Group Control</em></a></p></li>
+               <li id="zu04" style="margin-left: 480px;margin-top: 0;"> <a href="#"><img src="mydemoimg/zu_04.jpg" alt=""  /></a>
+                   <p><a href="#">集团管控<br /><em>Group Control</em></a></p></li>
+               <li id="zu05" style="margin-left: 640px;margin-top: 0;"> <a href="#"><img src="mydemoimg/zu_05.jpg" alt="" /></a>
+                   <p><a href="#">集团管控<br /><em>Group Control</em></a></p></li>
+               <li id="zu06" style="margin-left: 800px;margin-top: 0;" > <a href="#"><img src="mydemoimg/zu_06.jpg" alt="" /></a>
+                   <p><a href="#">集团管控<br /><em>Group Control</em></a></p></li>
+           </ul>
+        </div>
+    </div>
+    </div>
+
+    <!--经典案例和知识产品-->
+    <div class="jingdianchanpin clear">
+        <!--经典案例整体-->
+        <div class="jingdiankuang floatleft">
+            <!--经典案例文字和more-->
+            <div class="jingdianbiaoti">
+                <span>经典案例</span><a href="#" class="floatright"><img src="mydemoimg/more_logo1.png"> </a>
+            </div>
+            <!--经典案例 图片和图片旁边新闻简介-->
+            <div class="jingdiantuwen clear">
+                <div class="jingdiantuwentu floatleft"><a href="#"><img src="mydemoimg/anl2.jpg"></a></div>
+                <div class="jingdiantuwenwen floatleft"><a href="#"><h4>直击国企改革：改制重组</h4></a>
+                <p>项目名称：某市自来水表厂改制重组项目
+                    项目背景： 某自来水公司水表厂（以下简称；X厂）...<a href="#" style="color:#9a130f;">[View details]</a></p>
+                </div>
+
+            </div>
+            <!--经典案例 内容-->
+            <div class="jingdianneirong">
+                <ul><li><a href="#">直击国企改革：改制重组</a><span class="floatright">2017-03-03</span></li>
+                    <li><a href="#">老牛说煤第一期：如何看待世界经济新常态</a><span class="floatright">2017-03-03</span></li>
+                    <li><a href="#">老牛说煤第一期：如何看待世界经济新常态</a><span class="floatright">2017-03-03</span></li>
+                    <li><a href="#">老牛说煤第一期：如何看待世界经济新常态</a><span class="floatright">2017-03-03</span></li>
+                    <li><a href="#">老牛说煤第一期：如何看待世界经济新常态</a><span class="floatright">2017-03-03</span></li>
+                    <li><a href="#">老牛说煤第一期：如何看待世界经济新常态</a><span class="floatright">2017-03-03</span></li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!--知识产品整体-->
+        <div class="jingdiankuang floatleft" style="margin-left: 12px">
+            <!--知识产品文字和more-->
+            <div class="jingdianbiaoti">
+                <span>知识产品</span><a href="#" class="floatright"><img src="mydemoimg/more_logo1.png"> </a>
+            </div>
+            <!--知识产品 图片和图片旁边新闻简介-->
+            <div class="jingdiantuwen clear">
+                <div class="jingdiantuwentu floatleft"><a href="#"><img src="mydemoimg/anl3.jpg"></a></div>
+                <div class="jingdiantuwenwen floatleft"><a href="#"><h4>新书《企业文化建设》第五版</h4></a>
+                    <p>无论在国家层面还是企业层面，文化治理都属于顶层治理范畴。特别是在今天这个充满不确定性的大变革时代，我们比以往任何时候都更...<a href="#" style="color:#9a130f;">[View details]</a></p>
+                </div>
+
+            </div>
+            <!--知识产品 内容-->
+            <div class="jingdianneirong">
+                <ul><li><a href="#">仁达方略研究月报 2016年9月
+                </a><span class="floatright">2017-03-03</span></li>
+                    <li><a href="#">并购后的企业文化整合与融合
+                    </a><span class="floatright">2017-03-03</span></li>
+                    <li><a href="#">老牛说煤第一期：如何看待世界经济新常态</a><span class="floatright">2017-03-03</span></li>
+                    <li><a href="#">老牛说煤第一期：如何看待世界经济新常态</a><span class="floatright">2017-03-03</span></li>
+                    <li><a href="#">老牛说煤第一期：如何看待世界经济新常态</a><span class="floatright">2017-03-03</span></li>
+                    <li><a href="#">老牛说煤第一期：如何看待世界经济新常态</a><span class="floatright">2017-03-03</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+<!--企业介绍到客户支持-->
+    <div class="qiyedaochizhi clear">
+         <ul><li><h4 class="qiyebiaoti"><a href="#">企业介绍<br><em>Company Profile</em></a></h4><p>北京仁达方略企业管理咨询有限公司是国内领先的大型管理研究与咨询机构，集团管理权威...</p> </li>
+             <li><h4 class="qiyebiaoti"><a href="#">企业介绍<br><em>Company Profile</em></a></h4><p>北京仁达方略企业管理咨询有限公司是国内领先的大型管理研究与咨询机构，集团管理权威...</p> </li>
+             <li><h4 class="qiyebiaoti"><a href="#">企业介绍<br><em>Company Profile</em></a></h4><p>北京仁达方略企业管理咨询有限公司是国内领先的大型管理研究与咨询机构，集团管理权威...</p> </li>
+             <li style="border-right:none"><h4 class="qiyebiaoti"><a href="#">企业介绍<br><em>Company Profile</em></a></h4><p>北京仁达方略企业管理咨询有限公司是国内领先的大型管理研究与咨询机构，集团管理权威...</p> </li></ul>
+
+    </div>
+
+<!--合作伙伴和友情链接部分 -->
+    <div class="hezuolianjie">
+        <div class="hezuolianjiebiaoti">
+        <a class="dianhezuohuoban" style="padding-left: 30px;cursor:pointer " onmouseover="xianshikuang(51)" onmouseout="xianshikuang(52)" >合作伙伴 |</a>
+        <a class="dianhezuohuoban" style="cursor:pointer" onmouseover="xianshikuang(61)" onmouseout="xianshikuang(62)" >友情链接</a>
+        </div>
+        <div class="hezuokuang clear" id="hezuokuang" style="display: block">
+               <ul>
+            <li class="hezuoli"><a href="#"><img src="mydemoimg/20140207154207_47279.jpg"></a></li>
+            <li class="hezuoli"><a href="#"><img src="mydemoimg/20140207154207_47279.jpg"></a></li>
+                   <li class="hezuoli"><a href="#"><img src="mydemoimg/20140207154207_47279.jpg"></a></li>
+                   <li class="hezuoli"><a href="#"><img src="mydemoimg/20140207154207_47279.jpg"></a></li>
+                   <li class="hezuoli"><a href="#"><img src="mydemoimg/20140207154207_47279.jpg"></a></li>
+                   <li class="hezuoli"><a href="#"><img src="mydemoimg/20140207154207_47279.jpg"></a></li>
+                   <li class="hezuoli"><a href="#"><img src="mydemoimg/20140207154207_47279.jpg"></a></li>
+                   <li class="hezuoli"><a href="#"><img src="mydemoimg/20140207154207_47279.jpg"></a></li>
+                   <li class="hezuoli"><a href="#"><img src="mydemoimg/20140207154207_47279.jpg"></a></li>
+                   <li class="hezuoli"><a href="#"><img src="mydemoimg/20140207154207_47279.jpg"></a></li>
+                   <li class="hezuoli"><a href="#"><img src="mydemoimg/20140207154207_47279.jpg"></a></li>
+                   <li class="hezuoli"><a href="#"><img src="mydemoimg/20140207154207_47279.jpg"></a></li>
+                   <li class="hezuoli"><a href="#"><img src="mydemoimg/20140207154207_47279.jpg"></a></li>
+                   <li class="hezuoli"><a href="#"><img src="mydemoimg/20140207154207_47279.jpg"></a></li>
+                   <li class="hezuoli"><a href="#"><img src="mydemoimg/20140207154207_47279.jpg"></a></li>
+                   <li class="hezuoli"><a href="#"><img src="mydemoimg/20140207154207_47279.jpg"></a></li>
+                   <li class="hezuoli"><a href="#"><img src="mydemoimg/20140207154207_47279.jpg"></a></li>
+                   <li class="hezuoli"><a href="#"><img src="mydemoimg/20140207154207_47279.jpg"></a></li>
+                   <li class="hezuoli"><a href="#"><img src="mydemoimg/20140207154207_47279.jpg"></a></li>
+                   <li class="hezuoli"><a href="#"><img src="mydemoimg/20140207154207_47279.jpg"></a></li>
+                   <li class="hezuoli"><a href="#"><img src="mydemoimg/20140207154207_47279.jpg"></a></li>
+                   <li class="hezuoli"><a href="#"><img src="mydemoimg/20140207154207_47279.jpg"></a></li>
+                   <li class="hezuoli"><a href="#"><img src="mydemoimg/20140207154207_47279.jpg"></a></li>
+                   <li class="hezuoli"><a href="#"><img src="mydemoimg/20140207154207_47279.jpg"></a></li>
+               </ul>
+        </div>
+        <div class="youqingkuang clear" id="youqingkuang" style="display: none">
+            <!--6s管理 生产管理培训 衡水事业单位招聘 人力资源培训 河南拓展训练 重庆股票开户-->
+            <ul>
+                <li class="floatleft"><a href="#">6s管理</a></li>
+                <li class="floatleft"><a href="#">生产管理培训</a></li>
+                <li class="floatleft"><a href="#">衡水事业单位招聘</a></li>
+                <li class="floatleft"><a href="#">人力资源培训</a></li>
+                <li class="floatleft"><a href="#">河南拓展训练</a></li>
+                <li class="floatleft"><a href="#">重庆股票开户</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footlansekuang clear">
+        <div class="footneirong clear">
+            <ul class="ul1 clear">
+                <li class="ul1biaoti">管理咨询</li>
+                <li class="ul1neirong"><a href="#">集团管控</a></li>
+                <li class="ul1neirong"><a href="#">集团管控</a></li>
+                <li class="ul1neirong"><a href="#">集团管控</a></li>
+                <li class="ul1neirong"><a href="#">集团管控</a></li>
+                <li class="ul1neirong"><a href="#">集团管控</a></li>
+                <li class="ul1neirong"><a href="#">集团管控</a></li>
+            </ul>
+
+            <ul class="ul1 clear">
+                <li class="ul1biaoti">管理咨询</li>
+                <li class="ul1neirong"><a href="#">集团管控</a></li>
+                <li class="ul1neirong"><a href="#">集团管控</a></li>
+                <li class="ul1neirong"><a href="#">集团管控</a></li>
+                <li class="ul1neirong"><a href="#">集团管控</a></li>
+                <li class="ul1neirong"><a href="#">集团管控</a></li>
+                <li class="ul1neirong"><a href="#">集团管控</a></li>
+            </ul>
+
+            <ul class="ul1 clear">
+                <li class="ul1biaoti">管理咨询</li>
+                <li class="ul1neirong"><a href="#">集团管控</a></li>
+                <li class="ul1neirong"><a href="#">集团管控</a></li>
+                <li class="ul1neirong"><a href="#">集团管控</a></li>
+                <li class="ul1neirong"><a href="#">集团管控</a></li>
+                <li class="ul1neirong"><a href="#">集团管控</a></li>
+                <li class="ul1neirong"><a href="#">集团管控</a></li>
+            </ul>
+
+            <ul class="ul1 clear">
+                <li class="ul1biaoti">管理咨询</li>
+                <li class="ul1neirong"><a href="#">集团管控</a></li>
+                <li class="ul1neirong"><a href="#">集团管控</a></li>
+                <li class="ul1neirong"><a href="#">集团管控</a></li>
+                <li class="ul1neirong"><a href="#">集团管控</a></li>
+                <li class="ul1neirong"><a href="#">集团管控</a></li>
+                <li class="ul1neirong"><a href="#">集团管控</a></li>
+            </ul>
+
+            <ul class="ul1 clear">
+                <li class="ul1biaoti">管理咨询</li>
+                <li class="ul1neirong"><a href="#">集团管控</a></li>
+                <li class="ul1neirong"><a href="#">集团管控</a></li>
+                <li class="ul1neirong"><a href="#">集团管控</a></li>
+                <li class="ul1neirong"><a href="#">集团管控</a></li>
+                <li class="ul1neirong"><a href="#">集团管控</a></li>
+                <li class="ul1neirong"><a href="#">集团管控</a></li>
+            </ul>
+
+
+            <!--二维码列-->
+            <div class="erweilie">
+                <a href="#"><img src="mydemoimg/weixinnew.png"></a>
+                <b>全国统一服务热线:</b>
+                <img src="mydemoimg/tel_bottom.png">
+            </div>
+
+            <div class="xinlanglie">
+                <ul><li>仁达方略</li></ul>
+                <ul><li>仁达方略</li></ul>
+                <ul><li>仁达方略</li></ul>
+                <ul><li>仁达方略</li></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="zuihou clear"><p><span>公司地址：北京市海淀区北洼西里48号 京ICP备13006954号-1</span><span>Copyright © 2006-2014 仁达方略 All Rights Reserved.
+</span><a href="#"><img src="mydemoimg/pic.gif"></a></p></div>
+</footer>
+
+</body>
+</html>
+<SCRIPT LANGUAGE="JavaScript" src=http://float2006.tq.cn/floatcard?adminid=9029183&sort=1 ></SCRIPT>

@@ -1,0 +1,283 @@
+*{margin: 0;padding: 0}
+* ul{list-style-type: none}
+* a{list-style-type: none}
+* img{border:0 none}
+.floatleft{float: left}
+.floatright{float: right}
+.clear:after{display: block;clear: both;content: ".";visibility: hidden;height: 0;}
+.clear{zoom:1;}
+
+.welcome{font-size: 10px;height: 22px;padding-top: 6px}
+.juzhong{width: 1003px; margin: 0 auto;  }
+.about{width: 500px;height: 22px ;padding-top: 6px }
+.about ul{list-style-type:none;margin: 0  }
+.about ul li{font-size: 10px;float: left}
+.header-bg1{width: 100%; height: 82px;background-color: white;border-top: 1px solid #DFDFDF}
+.topbg-photo{
+    width: 713px;height: 82px;background: url("mydemoimg/topbc-photo.png") no-repeat 444px  ; padding-right: 0;margin-right: 0;}
+.imglist{width: 282px;height: 77px;overflow: hidden;list-style-type: none;margin: 0 ;padding: 10px 0 0 0px;}
+.imglist li{float: left;padding-right: 5px}
+.rendadianhuakuan{width: 1003px;height: 82px;margin: 0px auto;}
+/*
+{ background:url("jdloginimg/bgphoto.png")  no-repeat left; margin: 0 auto;padding-top: 15px;
+     width: 990px;height: 450px}
+
+     .top_imglogo{padding-top: 10px;width: 290px;   background: url("jdloginimg/logo-welcome.png")  no-repeat right 20px }
+
+*/
+
+
+/*蓝色背景条和内容*/
+.header-bg2{width: 100%; height: 38px;background-color: #1A7EC3;}
+/*.imglist{width: 282px;height: 77px;overflow: hidden;list-style-type: none;margin: 0 ;padding: 10px 0 0 0px;}*/
+.shouyedaosousuokuan{width: 1003px;height: 38px;margin: 0 auto;padding: 0;}
+/*.shouyedaowomen ul{width: 800px;height: 38px;margin: -5px auto;padding: 0;list-style-type: none;text-align: center;line-height: 38px;}*/
+.shouyedaowomen ul{width: 800px;height: 38px;padding: 0;list-style-type: none;text-align: center;line-height: 38px;margin: -5px auto;}
+
+.shouyedaowomen li{float: left;width: 105px;height: 38px;color: white;padding: 0;font-size: 14px;  cursor: Pointer;text-align: center;}
+/*.shouyedaowomen li{float: left;width: 105px;height: 38px;color: white;padding: 0;font-size: 14px;background: url(mydemoimg/bg_shouye.png)  no-repeat right center; margin-top: 0; cursor: Pointer;text-align: center;}*/
+.shouyedaowomen li:hover{background-color:#F1F1F1;color:#376B93;}
+.sousuo{margin: 0}
+.sousuoinput{
+    color:rgb(169, 169, 169);
+    margin:0;
+    outline: none;
+    padding: 0 10px 0 10px;
+    overflow: visible;
+    border: 1px solid rgb(180, 180, 180);
+    background-color:rgb(230, 240, 246) ;
+
+    width: 170px;
+    height: 26px;
+    line-height: 38px;
+    font-size: 10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    border-radius:15px;                /* 圆角边框 */
+    behavior:url(pie.htc);
+}
+
+
+
+
+/*关于仁达的弹出框*/
+.guanyukuang{width: 1003px;background-color:#F1F1F1;border: 1px solid #DFDFDF;margin: 0 auto;position: absolute;z-index: 2}
+.guanyukuang img{margin: 10px 20px;border-radius: 3px;}
+.guanyukuang dd  a{text-decoration: none;font-size: 12px;color:#666666;float: left;margin: 11px 25px 2px 20px}
+.guanyukuang dt{font-weight: bold;white-space: nowrap;width: 150px;color: #666666;margin-left: 18px;margin-bottom: 5px}
+.guanyukuang dl{width: 195px; margin: 10px 0}
+
+
+/*图片切换*/
+.tupianqiehuan{width: 1003px;  height: 260px;margin: 10px auto;position: relative }
+.xiangqian img{width: 40px;height: 100px;position: absolute;top: 90px;left: 0;opacity:0.2;filter:alpha(opacity=100);}
+.houtui img{width: 40px;height: 100px;position: absolute;top: 90px;left: 963px;opacity:0.2;filter:alpha(opacity=100);}
+/*动态标题*/
+.dongtaibiaoti{margin: 0 auto;width: 1003px;  height: 35px; }
+.dongtaibiaoti ul{list-style-type:none;margin: 0  ;padding: 0;height: 30px;}
+.dongtaibiaoti ul li{height: 30px;font-size: 10px;float: left;width: 330px;}
+.dongtaibiaotilogo1 {background-image:url("mydemoimg/dongtai_logo01.png");background-repeat:no-repeat;background-position:top 6px left 10px;background-size: 25px 25px}
+.dongtaibiaotilogo2{background:url("mydemoimg/dongtai_logo02.png") no-repeat top 6px left 10px;background-size: 30px 30px}
+.dongtaibiaotilogo3{background:url("mydemoimg/dongtai_logo03.png") no-repeat top 6px left 10px;background-size: 25px 25px}
+.dongtaibiaotiwenzi{display: inline-block;  padding-left: 40px;padding-top: 10px;  font-size: 15px;  color: #376B93;  font-weight: normal;}
+.dongtaibiaoti em{font-size: 12px;  color: #8D8D8D;  font-family: Georgia, "Times New Roman", Times, serif;padding-left: 10px; font-style:normal}
+.dongtaibiaoti a{color: #376B93;font-size: 14px;float: right;padding-right: 3px;padding-top: 10px}
+
+/*动态内容*/
+.dongtaineirong{width: 1003px;  margin: 0 auto;  }
+.dongtaineirongkuang{width: 325px;  margin: 0 auto;background-color: #EDEDED;border-radius: 9px;border: 1px solid #DFDFDF }
+.dongtaineirongimg{margin:7px 0 2px 5px;}
+.dongtaineirong ul{list-style-type: none;margin:0 auto;}
+.dongtaineirong ul li{margin: 10px 0 5px 5px;padding-bottom: 2px; color:#8D8D8D;font-size: 11px;}
+.dongtaineirong li:before {
+    content: "";
+    margin-bottom: 2px;
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    background-color: #95170B;
+    /*border-radius: 50%;*/
+}
+.dongtaineirong ul li a{margin-left: 5px;text-decoration: none;color:#8D8D8D;}
+.dongtaineirong ul li a:hover{color: #376B93;}
+.dongtaineirong ul li span{margin-right: 9px}
+.dongtaineirongkuang2{  margin: 0 10px; }
+
+/*核心业务*/
+.hexin{  width: 1003px;margin: 5px auto;border: 1px solid #D1D1D1}
+.hexinbiaoti{width: 1003px;height: 35px;background:url("mydemoimg/hexin_logo01.png") no-repeat top 6px left 10px;background-size: 25px 25px;background-color: #F6F6F6; border-bottom: solid 1px #D1D1D1}
+/*如果放2个背景图如下代码*/
+/*.hexinbiaoti{width: 1003px;height: 35px;*/
+    /*background-image:url("mydemoimg/hexin_logo01.png"),url("mydemoimg/more_logo.png");*/
+    /*background-repeat:  no-repeat, no-repeat;*/
+    /*background-position:top 6px left 10px, top 6px right 10px;*/
+    /*background-size: 25px 25px,77px 25px;*/
+    /*background-color: #F6F6F6;}*/
+
+
+.hexin span{display: inline-block;  padding-left: 40px;padding-top: 10px;  font-size: 15px;  color: #376B93;  font-weight: normal;}
+.hexin em {font-size: 12px;  color: #8D8D8D;  font-family: Georgia, "Times New Roman", Times, serif;padding-left: 10px; font-style:normal}
+.hexin a {margin: 9px 5px;}
+
+.hexintupiankuang{background-color: #EAEAEA ;position: relative}
+.zuoanniu{position: absolute;  top: 24px;left: 15px;cursor: pointer;filter:alpha(opacity=50);opacity:0.5;}
+.youanniu{position: absolute;  top: 24px;right: 15px;cursor: pointer;filter:alpha(opacity=50);opacity:0.5;}
+.hexintupianzu{position: relative; left: 100px; height: 135px;width: 798px;  overflow: hidden;}
+.hexintupianzu ul {position: absolute;margin-top: 13px}
+.hexintupianzu li{width: 142px;height: 98px;position:absolute;list-style-type: none;
+    margin: 13px 8px;}
+.hexintupianzu img{width: 142px;height: 98px}
+.hexintupianzu p{width:142px;height:36px;position:absolute;bottom:0;left:0;}
+.hexintupianzu p a{height:36px;line-height:18px;width:130px;text-align: center;display:block;color: #fff;background: #000;letter-spacing:1px;filter:alpha(opacity=60);opacity:0.6;padding:0 6px;}
+.hexintupianzu li p em{font-family:Georgia, "Times New Roman", Times, serif}
+
+/*经典案例和知识产品*/
+.jingdianchanpin{width: 1003px;margin: 0 auto}
+/*经典案例整体*/
+.jingdiankuang{width: 493px;  margin: 0 auto;background-color: #EDEDED;border-radius: 9px;border: 1px solid #DFDFDF;
+    position: relative; }
+/*经典案例文字和more*/
+.jingdianbiaoti span{position: absolute;display: inline-block;width: 149px;height: 39px;text-align: center;line-height: 39px;font-size:14px;background-color:royalblue;color:white;font-weight:normal;}
+.jingdianbiaoti{width: 500px;height: 39px;}
+.jingdianbiaoti img{margin: 9px 10px}
+/*经典案例 图片和图片旁边新闻简介*/
+.jingdiantuwen h4{font-size: 13px;  color: #376B93;  font-weight:bold;margin-bottom: 5px}
+.jingdiantuwen a{text-decoration: none;}
+.jingdiantuwen p{color:#8D8D8D;font-size: 12px;}
+.jingdiantuwen{margin: 10px;border-bottom: 1px solid white}
+.jingdiantuwenwen{width: 300px;margin: 1px 1px 1px 20px}
+/*经典案例 内容*/
+.jingdianneirong ul{list-style-type: none;margin:0 auto;}
+.jingdianneirong ul li{margin: 10px 0 5px 5px;padding-bottom: 2px; color:#8D8D8D;font-size: 11px;}
+.jingdianneirong li:before {
+    content: "";
+    margin-bottom: 2px;
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    background-color: #95170B;
+    /*border-radius: 50%;*/
+}
+.jingdianneirong ul li a{margin-left: 5px;text-decoration: none;color:#8D8D8D;}
+.jingdianneirong ul li a:hover{color: #376B93;}
+.jingdianneirong ul li span{margin-right: 9px}
+
+/*<!--企业介绍到客户支持-->*/
+.qiyedaochizhi{  width: 1003px;border-radius: 6px;border: 1px solid #DFDFDF;margin: 10px auto;padding: 18px 0}
+/*<!--企业介绍->*/
+/*.qiyejieshaokuang{width: 208px;height: 114px}*/
+/*<!--企业标题->*/
+
+/*<!--企业介绍->*/
+.qiyedaochizhi li {width: 209px;float: left;border-right: 1px solid #DEDEDE;height: auto;overflow: hidden;padding: 0 20px 0 20px;}
+.qiyedaochizhi li h4{margin-bottom: 5px;}
+.qiyedaochizhi li h4 a{display: inline-block;font-size: 14px;color: #376C96;padding-left: 55px;height:36px;line-height: 18px;overflow: hidden;font-weight:normal;}
+.qiyedaochizhi li h4 a em{font-family:Georgia, "Times New Roman", Times, serif;font-size:12px;}
+.qiyedaochizhi li p{line-height:24px;font-size: 10px;color:silver;}
+.qiyebiaoti a{background-image:url(mydemoimg/bc_qiyejieshao.png);background-repeat: no-repeat;background-position:top 10px left 6px;}
+
+/*合作伙伴和友情链接部分*/
+
+
+
+
+.hezuolianjie{  width: 1003px;margin: 0 auto;  border: 1px solid #DFDFDF;}
+.hezuolianjiebiaoti{
+    margin: 5px 10px;
+    font-size: 14px ;
+    color: #376C96;
+    background: url(mydemoimg/xinlogo.png)  no-repeat left center;
+    background-size: 20px;
+    height: 32px;
+    line-height: 32px;
+    border-bottom: 1px dotted #ddd;
+    margin-bottom: 10px;
+    position: relative;
+}.hezuoli{float: left;  width: 112px;  height: 39px;  border: 1px solid #eee;  margin: 0 4px 6px 4px;}
+.hezuoli:hover{border:1px solid #ddd;}
+.hezuoli a {
+    margin-right: 12px;
+    white-space: nowrap;
+    line-height: 24px;
+}
+.hezuoli img{width:112px;height:39px;filter:alpha(opacity=80);opacity:0.8;}
+.hezuoli img:hover{filter:alpha(opacity=100);opacity:1;}
+.hezuokuang ul{list-style-type:none;margin: 7px 12px}
+
+.youqingkuang ul{font-size: 10px;line-height: 30px;height: 30px;}
+.youqingkuang li{margin: 1px 10px;}
+.youqingkuang a {color: #999999;text-decoration: none}
+.youqingkuang a:hover{color: #376B93}
+/*尾部*/
+.footlansekuang{
+    margin: 20px 0;
+    color: #333;
+    background: #1D5CA3;
+    padding-bottom: 12px;
+    /*overflow: hidden;*/
+}
+.footneirong{
+    width: 1003px;
+    margin: 0 auto;
+    position: relative;  }
+
+.ul1{float: left;
+    width: 94px;
+    height: 240px;
+    margin-top: 10px;
+    margin-right: 50px}
+.ul1biaoti{font-size: 14px;
+    font-weight: bold;
+    padding-top: 13px;
+    margin-bottom: 10px;
+    color: #eee;}
+.ul1neirong{padding-right: 25px;
+    text-align: left;
+    height: 24px;
+    line-height: 24px;}
+.ul1neirong a {
+    color: #ddd;
+    padding-left: 12px;
+    text-decoration: none;
+    font-size: 11px;
+}
+.ul1neirong a:hover{color: white}
+.ul1neirong:before {
+    content: "";
+    margin-bottom: 2px;
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    background-color: white;
+    /*border-radius: 50%;*/
+}
+
+/*二维码列*/
+.erweilie{
+    float: left;
+    width: 94px;
+    height: 240px;
+    margin-top: 10px;
+    margin-right: 40px;
+
+}
+.erweilie img{margin-top: 10px;}
+.erweilie b{font-size: 14px;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    color: #ddd;
+    white-space: nowrap;
+}
+.xinlanglie{float: right;
+    width: 94px;
+    height: 240px;
+    margin-top: 10px;  }
+.xinlanglie li{padding: 10px 0 10px 30px;font-size: 10px;
+   margin: 16px 0;
+border-radius: 3px ;background: url("mydemoimg/sina_logo.png") no-repeat top 2px left 0;background-size: 29px 26px; background-color: #6079b2;
+}
+
+
+.zuihou{height: 50px; width: 100%;color: #666666;background-color: #eaeaea;font-size: 10px;text-align: center;margin-top: -20px}
+.zuihou p{padding-top: 20px}
